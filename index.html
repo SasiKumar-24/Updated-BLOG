@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Tamil Singers</h1>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h2>Latest Articles</h2>
+            
+            <div class="blog-grid">
+                <article class="blog-card" data-id="1">
+                    <div class="card-image">
+                        <img src="image2.jpg"ait="sample image" viewBox="0 0 800 600" width="100%" height="100%">
+                            <rect width="800" height="600" fill="#4f46e5" />
+                            <circle cx="400" cy="300" r="150" fill="#818cf8" />
+                            <rect x="250" y="350" width="300" height="20" fill="#c7d2fe" />
+                            <rect x="300" y="380" width="200" height="20" fill="#c7d2fe" />
+                            <rect x="330" y="410" width="140" height="20" fill="#c7d2fe" />
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-date">August 4, 2025</div>
+                        <h3 class="card-title"> S. P. Balasubrahmanyam</h3>
+                        <p class="card-description"> An Indian playback singer, television presenter, actor, music composer, dubbing artist, and film producer.Over his career, he received six National Film Awards for Best Male Playback Singer for his performances in Telugu, Tamil, Kannada, and Hindi, along with 25 Andhra Pradesh state Nandi Awards for his work in Telugu cinema.</p>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </article>
+                
+                <article class="blog-card" data-id="2">
+                    <div class="card-image">
+                        <img src="sgimage2.jpg"ait="sample image" viewBox="0 0 800 600" width="100%" height="100%">
+                            <rect width="800" height="600" fill="#0891b2" />
+                            <polygon points="400,150 600,400 200,400" fill="#22d3ee" />
+                            <rect x="250" y="420" width="300" height="20" fill="#a5f3fc" />
+                            <rect x="300" y="450" width="200" height="20" fill="#a5f3fc" />
+                            <rect x="330" y="480" width="140" height="20" fill="#a5f3fc" />
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-date">August 3, 2025</div>
+                        <h3 class="card-title">Shreya Ghoshal</h3>
+                        <p class="card-description">She is one of the most prolific and influential singers of India.Often referred to as the "Queen of Dynamics'' for her remarkable vocal expressions, Ghoshal is widely regarded as one of the greatest vocalists of the Indian subcontinent.One of the most awarded singers of India,Shreya Ghoshal has won five National Film Awards for Best Female Playback Singer.</p>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </article>
+                
+                <article class="blog-card" data-id="3">
+                    <div class="card-image">
+                        <img src="hipimage1.webp"ait="sample image" viewBox="0 0 800 600" width="100%" height="100%">
+                            <rect width="800" height="600" fill="#c026d3" />
+                            <rect x="250" y="200" width="300" height="200" fill="#e879f9" />
+                            <rect x="250" y="420" width="300" height="20" fill="#f5d0fe" />
+                            <rect x="300" y="450" width="200" height="20" fill="#f5d0fe" />
+                            <rect x="330" y="480" width="140" height="20" fill="#f5d0fe" />
+                        </svg>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-date">August 2, 2025</div>
+                        <h3 class="card-title">Hiphop Tamizha Aadhi</h3>
+                        <p class="card-description">Hiphop Tamizha is an Indian Music Director,Rapper,Indian musical duo based in Chennai, Tamil Nadu. The duo consists of Rangadhithya "Adhi" Ramachandran Venkatapathy and R. Jeeva.he would also be director and musical composer.Thani Oruvan topped Apple Music's Best of 2015 list in the category "Best Tamil Album of the year".</p>
+                        <button class="read-more">Read More</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>Tamil Singers</h2>
+                    <p>Songs and their works are really enjoyable for their fans.</p>
+                </div>
+                
+                <div class="copyright">
+                    &copy; 2025 Tamil Singers & SK. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Article Modal -->
+    <div class="article-modal" id="articleModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header" id="modalHeader">
+                <!-- SVG will be inserted here -->
+            </div>
+            <div class="modal-body">
+                <div class="modal-date" id="modalDate"></div>
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <div class="modal-text" id="modalText"></div>
+                <button class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Articles
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Blog article data
+        const blogArticles = [
+            {
+                id: 1,
+                title: "PAADUM NILA",
+                date: "August 4, 2025",
+                image: `<img src="image1.jpg" ait sample image viewBox="0 0 800 600" width="100%" height="100%">
+                            <rect width="800" height="600" fill="#4f46e5" />
+                            <circle cx="400" cy="300" r="150" fill="#818cf8" />
+                            <rect x="250" y="350" width="300" height="20" fill="#c7d2fe" />
+                            <rect x="300" y="380" width="200" height="20" fill="#c7d2fe" />
+                            <rect x="330" y="410" width="140" height="20" fill="#c7d2fe" />
+                        </svg>`,
+                content: `
+                    <p>Sripathi Panditaradhyula Balasubrahmanyam (4 June 1946 ), commonly known as SPB or Balu, was an Indian playback singer, television presenter, actor, music composer, dubbing artist, and film producer.Over his career, he received six National Film Awards for Best Male Playback Singer for his performances in Telugu, Tamil, Kannada, and Hindi, along with 25 Andhra Pradesh state Nandi Awards for his work in Telugu cinema. Additionally, he was honoured various state awards from Karnataka and Tamil Nadu governments,four Filmfare Awards South and a Filmfare Award.</p>
+                    
+                    <p>Over his career, he received six National Film Awards for Best Male Playback Singer for his performances in Telugu, Tamil, Kannada, and Hindi, along with 25 Andhra Pradesh state Nandi Awards for his work in Telugu cinema. Additionally, he was honoured various state awards from Karnataka and Tamil Nadu governments,four Filmfare Awards South and a Filmfare Award. Balasubrahmanyam received the NTR National Award from the Government of Andhra Pradesh in 2012, the Harivarasanam Award from the Government of Kerala in 2015,and was named the Indian Film Personality of the Year at the 47th International Film Festival of India in 2016. The Government of India honored him with the Padma Shri in 2001, the Padma Bhushan in 2011, and the Padma Vibhushan posthumously in 2021.</p>
+                    
+                    <p>On 5 August 2020, Balasubrahmanyam tested positive for COVID-19 during the COVID-19 pandemic in India and was admitted to MGM Healthcare in Chennai.Subsequently, his health deteriorated and he was shifted to the intensive care unit in a critical state. On 7 September 2020, Balasubrahmanyam tested negative for the coronavirus, although he remained using a ventilator and ECMO.Balasubrahmanyam died on 25 September 2020 at 1:04 pm (IST) of cardio-respiratory arrest after over a month-long hospitalisation. He was buried at his farm house in Thamaraipaakkam, Thiruvallur district with state honours on 26 September 2020.</p>
+                    
+                   
+                `
+            },
+            {
+                id: 2,
+                title: "Melody Queen of Indian Cinema",
+                date: "August 4, 2025",
+                image: `<img src="sgimage1.jpg" ait sample image viewBox="0 0 800 600" width="100%" height="100%">
+                            <rect width="800" height="600" fill="#0891b2" />
+                            <polygon points="400,150 600,400 200,400" fill="#22d3ee" />
+                            <rect x="250" y="420" width="300" height="20" fill="#a5f3fc" />
+                            <rect x="300" y="450" width="200" height="20" fill="#a5f3fc" />
+                            <rect x="330" y="480" width="140" height="20" fill="#a5f3fc" />
+                        </svg>`,
+                content: `
+                    <p>She also known her wide vocal range and versatility, she is one of the most prolific and influential singers of India. Often referred to as the "Queen of Dynamics'' for her remarkable vocal expressions, Ghoshal is widely regarded as one of the greatest vocalists of the Indian subcontinent.</p>
+                    
+                    <p>Ghoshal's first recording was "Ganraj Rangi Nachto", which is a cover version of a Marathi song originally sung by Lata Mangeshkar.Her first studio album was Bendhechhi Beena, which was released on 1 January 1998, with 14 tracks.</p>
+                    
+                    <p>hoshal married her childhood friend and current Global Head of Truecaller (for Business) Shiladitya Mukhopadhyaya in a traditional Bengali ceremony on 5 February 2015. On 22 May 2021, Ghoshal gave birth to a son named Devyaan in Mumbai.</p>
+
+                    <p>Shreya Ghoshal has been the voice behind countless iconic Bollywood hits. From romantic ballads to foot-tapping numbers, her vocal prowess has captivated audiences across the globe." Her statue representation at Madame Tussauds "is a recognition of her unmatched impact on the music industry, not only in India but worldwide.</p>
+                        >
+
+`                   
+            },
+            {
+                id: 3,
+                title: "Indian Rapper and Singer",
+                date: "August 2, 2025",
+                image: `<img src="hipimage2.jpg" alt"Sample image"viewBox="0 0 800 600" width="100%" height="100%">
+                            <rect width="800" height="600" fill="#c026d3" />
+                            <rect x="250" y="200" width="300" height="200" fill="#e879f9" />
+                            <rect x="250" y="420" width="300" height="20" fill="#f5d0fe" />
+                            <rect x="300" y="450" width="200" height="20" fill="#f5d0fe" />
+                            <rect x="330" y="480" width="140" height="20" fill="#f5d0fe" />
+                        </svg>`,
+                content: `
+                    <p>Adhi and Jeeva remained underground until they were asked by the Tamil Nadu State Election Commission to compose an election anthem. Hiphop Tamizha's single Ezhuvoam Vaa was chosen as the official anthem for Tamil Nadu's 2011 state elections, and Adhi performed it at Pachaiyappa's College when Anna Hazare came there.Though the song was commercially unsuccessful.Their commercial break-through came with the song "Club le Mabbu le" in 2011.</p>
+
+                    <p>Adhi sang his first film song,titled "Thapellam Thappe Illai" (composed by Vijay Antony) for Naan in 2012.He also sang the title track of Ethir Neechal(composed by Anirudh Ravichander) accompanied by Punjabi rapper "Yo Yo Honey Singh" Also in 2013.In May of that year, Adhi again collaborated with Anirudh Ravichander to perform the song "Chennai City Gangsta".Adhi's third collaboration with Anirudh was for Kaththi (2014) where he performed the song "Pakkam Vanthu".</p>
+
+                    <p>In 2016,he announced that he would be making his cinematic acting debut in Meesaya Murukku, for which he would also be director and musical composer.The film, released in 2017, was partly biographical of his life. After Meesaya Murukku, they are back to direct another movie which is titled as fourth Sivakumarin Sabadham without also producing in the banner Hiphop Tamizha Entertainment with Sathya Jyothi Films.Later he directed Kadaisi Ulaga Por is a 2024 Indian Tamil-language science fiction political action thriller film written, and produced by Hiphop Tamizha Aadhi under Hiphop Tamizha Entertainment.</p>
+
+                    <p>In 2013 Anna University's annual event Techofes "Independent Artist of the Year".In 2017 City Cine Awards "Favourite Debutant". In 2018 Behinwoods Gold Medals "Best Entertainer – Meesaya Murukku". In 2019 Behindwoods Gold Mic Awards "The Icon of Independent Music".</p>
+                `
+            }
+        ];
+
+        // Get DOM elements
+        const modal = document.getElementById('articleModal');
+        const modalHeader = document.getElementById('modalHeader');
+        const modalDate = document.getElementById('modalDate');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalText = document.getElementById('modalText');
+        const closeButton = document.querySelector('.modal-close');
+        const backButton = document.querySelector('.back-button');
+        const blogCards = document.querySelectorAll('.blog-card');
+        const readMoreButtons = document.querySelectorAll('.read-more');
+
+        // Function to open modal with article content
+        function openArticle(articleId) {
+            const article = blogArticles.find(article => article.id === parseInt(articleId));
+            
+            if (article) {
+                modalHeader.innerHTML = article.image;
+                modalDate.textContent = article.date;
+                modalTitle.textContent = article.title;
+                modalText.innerHTML = article.content;
+                
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling behind modal
+            }
+        }
+
+        // Function to close modal
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // Add click event listeners to blog cards
+        blogCards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                // If the click is on the read more button, let that handler take care of it
+                if (e.target.classList.contains('read-more')) {
+                    return;
+                }
+                
+                const articleId = this.getAttribute('data-id');
+                openArticle(articleId);
+            });
+        });
+
+        // Add click event listeners to read more buttons
+        readMoreButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent the card click event from firing
+                const articleId = this.closest('.blog-card').getAttribute('data-id');
+                openArticle(articleId);
+            });
+        });
+
+        // Close modal when clicking the close button
+        closeButton.addEventListener('click', closeModal);
+        
+        // Close modal when clicking the back button
+        backButton.addEventListener('click', closeModal);
+
+        // Close modal when clicking outside the content
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal when pressing Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'966d1ff5d4139bf3',t:'MTc1Mzc5NzQ0MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
